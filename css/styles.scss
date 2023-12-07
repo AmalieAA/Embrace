@@ -18,3 +18,20 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "bootstrapComponents";
 
 // 5. Du kan lave styling her...
+
+.input-text{
+	font-size: 0.7em;
+}
+
+.label-subtitle{
+	font-size: 0.7em;
+}
+
+.complete-icon{
+	font-size: 7rem;
+	margin-bottom: 110px;
+}
+
+.container-fluid{
+	min-height: 100vh;
+}
