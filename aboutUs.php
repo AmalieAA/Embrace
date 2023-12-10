@@ -26,7 +26,7 @@
 <main role="main" class="container-fluid">
 
 
-    <div class="row bg-white shadow-sm m-3 p-3 align-items-center flex-grow-1">
+    <div class="row bg-white shadow m-3 p-3 align-items-center flex-grow-1" style="border: #6BA27D solid">
 
         <div class="text-center">
             <h3>Om os</h3>
