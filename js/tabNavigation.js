@@ -1,5 +1,5 @@
 function showNextTab() {
-    const currentActive = document.querySelector('#RegisterForm .active');
+    const currentActive = document.querySelector('.tab-content .active');
     const nextTab = currentActive.nextElementSibling;
 
     if(nextTab != null) {
@@ -12,7 +12,7 @@ function showNextTab() {
     }
 }
 function showPreviousTab() {
-    const currentActive = document.querySelector('#RegisterForm .active');
+    const currentActive = document.querySelector('.tab-content .active');
     const previousTab = currentActive.previousElementSibling;
 
     if(previousTab != null) {

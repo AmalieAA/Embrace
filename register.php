@@ -90,7 +90,7 @@ if (!empty($_POST["data"])){
 <body class="bg-light-green">
 
 
-<div class="container-fluid">
+<main role="main" class="container-fluid">
     <form id="RegisterForm" class="p-3 tab-content" method="post" action="register.php" enctype="multipart/form-data">
 
         <div class="tab-pane fade show active" id="create-account">
@@ -108,27 +108,27 @@ if (!empty($_POST["data"])){
 
             <div class="my-5">
                 <label class="py-2" for="fullName">Dit navn</label>
-                <input class="form-control input-text border-0 shadow-sm py-2 " type="text" name="data[fullName]" id="fullName" placeholder="Angiv dit for- og efternavn" value="">
+                <input class="form-control input-text border-0 shadow-sm" type="text" name="data[fullName]" id="fullName" placeholder="Angiv dit for- og efternavn" value="">
             </div>
 
             <div class="my-5">
                 <label class="py-2" for="dateOfBirth">Din fødselsdag</label>
-                <input class="form-control input-text border-0 shadow-sm py-2 " type="date" name="data[dateOfBirth]" id="dateOfBirth" placeholder="Angiv din fødselsdag" value="">
+                <input class="form-control input-text border-0 shadow-sm" type="date" name="data[dateOfBirth]" id="dateOfBirth" placeholder="Angiv din fødselsdag" value="">
             </div>
 
             <div class="my-5">
                 <label class="py-2" for="email">Din e-mail</label>
-                <input class="form-control input-text border-0 shadow-sm py-2 " type="text" name="data[email]" id="email" placeholder="Indtast din e-mail" value="">
+                <input class="form-control input-text border-0 shadow-sm" type="text" name="data[email]" id="email" placeholder="Indtast din e-mail" value="">
             </div>
 
             <div class="my-5">
                 <label class="py-2" for="password">Adgangskode</label>
-                <input class="form-control input-text border-0 shadow-sm py-2 " type="text" name="data[password]" id="password" placeholder="Indtast en adgangskode" value="">
+                <input class="form-control input-text border-0 shadow-sm" type="text" name="data[password]" id="password" placeholder="Indtast en adgangskode" value="">
             </div>
 
             <div class="my-5">
                 <label class="py-2" for="password">Bekræft adgangskode</label>
-                <input class="form-control input-text border-0 shadow-sm py-2 " type="text" name="data[password]" id="password" placeholder="Indtast din adgangskode igen for at bekræfte" value="">
+                <input class="form-control input-text border-0 shadow-sm" type="text" name="data[password]" id="password" placeholder="Indtast din adgangskode igen for at bekræfte" value="">
             </div>
 
             <div class="d-flex justify-content-between my-3" role="tablist">
@@ -153,17 +153,17 @@ if (!empty($_POST["data"])){
 
             <div class="my-5">
                 <label class="py-2" for="gender">Køn</label>
-                <input class="form-control input-text border-0 shadow-sm py-2 " type="text" name="data[gender]" id="gender" placeholder="Angiv din kønsidentitet" value="">
+                <input class="form-control input-text border-0 shadow-sm" type="text" name="data[gender]" id="gender" placeholder="Angiv din kønsidentitet" value="">
             </div>
 
             <div class="my-5">
                 <label class="py-2" for="pronouns">Dine pronominer</label>
-                <input class="form-control input-text border-0 shadow-sm py-2 " type="text" name="data[pronouns]" id="pronouns" placeholder="Angiv dine pronominer" value="">
+                <input class="form-control input-text border-0 shadow-sm" type="text" name="data[pronouns]" id="pronouns" placeholder="Angiv dine pronominer" value="">
             </div>
 
             <div class="my-5">
                 <label class="py-2" for="sexuality">Seksualitet</label>
-                <input class="form-control input-text border-0 shadow-sm py-2 " type="text" name="data[sexuality]" id="sexuality" placeholder="Indtast din seksualitet" value="">
+                <input class="form-control input-text border-0 shadow-sm" type="text" name="data[sexuality]" id="sexuality" placeholder="Indtast din seksualitet" value="">
             </div>
 
 
@@ -176,12 +176,12 @@ if (!empty($_POST["data"])){
                      </label>
                 </div>
 
-                <div class="input-text">
+                <div>
                     <input class="form-check-input" type="checkbox" name="data[lookingForFriendship]" value="true" id="lookingForFriendship">
                     <label class="form-check-label" for="lookingForFriendship">Relationer</label>
                 </div>
 
-                <div class="input-text">
+                <div>
                     <input class="form-check-input" type="checkbox" name="data[lookingForRelationship]" value="true" id="lookingForRelationship">
                     <label class="form-check-label" for="lookingForRelationship">Forhold</label>
                 </div>
@@ -195,7 +195,7 @@ if (!empty($_POST["data"])){
                     </span>
                 </label>
 
-                <select class="form-select input-text border-0 shadow-sm py-2" multiple name="data[myValues][]" id="myValues">
+                <select class="form-select input-text border-0 shadow-sm" multiple name="data[myValues][]" id="myValues">
                     <option>Vælg dine egne værdier</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -210,7 +210,7 @@ if (!empty($_POST["data"])){
                     </span>
                 </label>
 
-                <select class="form-select input-text border-0 shadow-sm py-2" multiple name="data[preferedValues][]" id="preferedValues">
+                <select class="form-select input-text border-0 shadow-sm" multiple name="data[preferedValues][]" id="preferedValues">
                     <option>Hvilke værdier søger du i en relation?</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -221,12 +221,12 @@ if (!empty($_POST["data"])){
 
             <div class="my-5">
                 <label class="py-2" for="description">Beskrivelse</label>
-                <input class="form-control input-text border-0 shadow-sm py-2 " type="text" name="data[description]" id="description" placeholder="Indsæt en kort beskrivelse om dig sekv" value="">
+                <input class="form-control input-text border-0 shadow-sm" type="text" name="data[description]" id="description" placeholder="Indsæt en kort beskrivelse om dig sekv" value="">
             </div>
 
             <div class="my-5">
                 <label class="py-2" for="profileImage">Profilbillede</label>
-                <input class="form-control input-text border-0 shadow-sm py-2 " type="file" name="profileImage" id="profileImage" placeholder="" value="">
+                <input class="form-control input-text border-0 shadow-sm" type="file" name="profileImage" id="profileImage" placeholder="" value="">
             </div>
 
             <div class="d-flex justify-content-between my-3" role="tablist">
@@ -253,7 +253,7 @@ if (!empty($_POST["data"])){
             <div class="my-5">
                 <label class="py-2" for="question1">Spørgsmål 1</label>
 
-                <select class="form-select input-text border-0 shadow-sm py-2" name="data[question1]" id="question1">
+                <select class="form-select input-text border-0 shadow-sm" name="data[question1]" id="question1">
                     <option>Angiv dit svar</option>
                     <option>1</option>
                     <option>2</option>
@@ -263,7 +263,7 @@ if (!empty($_POST["data"])){
             <div class="my-5">
                 <label class="py-2" for="question2">Spørgsmål 2</label>
 
-                <select class="form-select input-text border-0 shadow-sm py-2" name="data[question2]" id="question2">
+                <select class="form-select input-text border-0 shadow-sm" name="data[question2]" id="question2">
                     <option>Angiv dit svar</option>
                     <option>1</option>
                     <option>2</option>
@@ -273,7 +273,7 @@ if (!empty($_POST["data"])){
             <div class="my-5">
                 <label class="py-2" for="question3">Spørgsmål 3</label>
 
-                <select class="form-select input-text border-0 shadow-sm py-2" name="data[question3]" id="question3">
+                <select class="form-select input-text border-0 shadow-sm" name="data[question3]" id="question3">
                     <option>Angiv dit svar</option>
                     <option>1</option>
                     <option>2</option>
@@ -283,7 +283,7 @@ if (!empty($_POST["data"])){
             <div class="my-5">
                 <label class="py-2" for="question4">Spørgsmål 4</label>
 
-                <select class="form-select input-text border-0 shadow-sm py-2" name="data[question4]" id="question4">
+                <select class="form-select input-text border-0 shadow-sm" name="data[question4]" id="question4">
                     <option>Angiv dit svar</option>
                     <option>1</option>
                     <option>2</option>
@@ -293,7 +293,7 @@ if (!empty($_POST["data"])){
             <div class="my-5">
                 <label class="py-2" for="question5">Spørgsmål 5</label>
 
-                <select class="form-select input-text border-0 shadow-sm py-2" name="data[question5]" id="question5">
+                <select class="form-select input-text border-0 shadow-sm" name="data[question5]" id="question5">
                     <option>Angiv dit svar</option>
                     <option>1</option>
                     <option>2</option>
@@ -310,7 +310,7 @@ if (!empty($_POST["data"])){
         </div>
 
     </form>
-</div>
+</main>
 
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

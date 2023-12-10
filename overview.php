@@ -36,24 +36,24 @@ $users = $db->sql($sql, $bind);
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body class="bg-light-blue">
+<body>
 
 <?php
 foreach ($users as $user)
 ?>
 
-<div class="container-fluid">
+<main role="main" class="container-fluid">
 
 
-    <div class="bg-white m-3 p-3">
+    <div class="bg-white shadow-sm m-3 p-3 flex-grow-1">
 
-        <div class="text-center">
+        <div id="ProfilePic" class="text-center mx-auto">
 
-            <img id="ProfilePic" class="img-fluid" src="uploads/<?php echo $user->profileImage; ?>">
+            <img class="img-fluid" src="uploads/<?php echo $user->profileImage; ?>">
 
         </div>
 
-        <div class="row text-center py-3">
+        <div class="row text-center pt-3 pb-5">
 
             <div class="col"><?php echo $user->fullName; ?></div>
             <div class="col"><?php echo $user->pronouns; ?></div>
@@ -70,13 +70,13 @@ foreach ($users as $user)
 
         </div>
 
-        <div class="row py-3">
+        <div class="row pt-3 pb-5">
 
 
 
-            <div class="col text-center">
+            <div class="col-4 text-center">
 
-                <div>
+                <div class="fs-4">
                     <i class="fa-solid fa-eye"></i>
                 </div>
 
@@ -113,19 +113,25 @@ foreach ($users as $user)
 
     </div>
 
-    <div class="d-flex justify-content-between my-3" role="tablist">
+    <div class="d-flex justify-content-between m-3 my-5" role="tablist">
 
 
         <a class="btn shadow-sm" href="overview.php?prevUser=<?php
         echo $user->userId;
 
-        ?>">Tilbage</a>
-        <a class="btn shadow-sm" type="button" onclick="showNextTab()">Videre</a>
+        ?>">Ikke for mig</a>
+        <a class="btn shadow-sm" href="newConnection.php?connectedUser=<?php
+        echo $user->userId;
+
+        ?>">Lær at kende</a>
 
     </div>
-</div>
 
 
+</main>
+
+
+<?php include "includes/bottomNavigation.php";?>
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>

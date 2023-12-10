@@ -25,6 +25,8 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 .input-text{
 	font-size: 0.7em;
+	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
 }
 
 .label-subtitle{
@@ -47,9 +49,22 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 }
 
 #ProfilePic{
-	height: auto;
-	width: 150px;
+	height: 230px;
+	width: 230px;
 	border-radius: 50%;
+	object-fit: contain;
+	overflow: hidden;
+	border: 8px solid var(--bs-light-blue);
+}
+
+.new-match-pic{
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	object-fit: contain;
+	overflow: hidden;
+	border: 4px solid var(--bs-light-blue);
+
 }
 
 .btn{
@@ -61,4 +76,37 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 #DoneIcon{
 	height: auto;
 	width: 150px;
+}
+main {
+	min-height: calc(100vh - 40px);
+	display: flex;
+	flex-direction: column;
+}
+#QuizTabs {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
+#QuizTabs .tab-pane.show {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	& > div:first-child {
+		flex-grow: 1;
+	}
+}
+
+.quiz-navigation-btn:not(.show),
+.quiz-answer:not(.show),
+.yes-button.hide,
+.no-button.hide {
+	display: none;
+}
+
+.description-text{
+	padding-inline-start: 30px;
+}
+
+.question-icon{
+	font-size: 70px;
 }
