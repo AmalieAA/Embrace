@@ -8,6 +8,7 @@ function showNextTab() {
         currentActive.classList.remove('show');
         nextTab.classList.add('active');
         nextTab.classList.add('show');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 }
 function showPreviousTab() {
@@ -20,5 +21,6 @@ function showPreviousTab() {
         currentActive.classList.remove('show');
         previousTab.classList.add('active');
         previousTab.classList.add('show');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 }

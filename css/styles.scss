@@ -11,6 +11,10 @@ $link-decoration: none;
 // 4. Include any default map overrides here
 $custom-colors: (
 	"farve": $cyan-400,
+	"dark-green": #76A17F,
+	"light-green": #D5E1C9,
+	"light-blue": #88AAD3
+
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
@@ -32,6 +36,29 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 	margin-bottom: 110px;
 }
 
-.container-fluid{
-	min-height: 100vh;
+
+#ProcesBar {
+	gap: 20px;
+	.col {
+		height: 6px;
+		background-color: white;
+
+	}
+}
+
+#ProfilePic{
+	height: auto;
+	width: 150px;
+	border-radius: 50%;
+}
+
+.btn{
+	background-color: white;
+	color: black;
+	padding: 4px 20px;
+}
+
+#DoneIcon{
+	height: auto;
+	width: 150px;
 }
