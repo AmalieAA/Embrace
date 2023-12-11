@@ -36,11 +36,13 @@ $users = $db->sql($sql, $bind);
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
+<body class="bg-grey">
 
 <?php
 foreach ($users as $user)
 ?>
+
+<?php include "includes/header.php";?>
 
 <main role="main" class="container-fluid">
 

@@ -28,11 +28,14 @@ $users = $db->sql("SELECT * FROM user WHERE userId = " . $_COOKIE["userId"]);
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
+<body class="bg-grey">
 
 <?php
 foreach ($users as $user)
 ?>
+
+<?php include "includes/header.php";?>
+
 
 <main role="main" class="container-fluid">
 
@@ -109,6 +112,10 @@ foreach ($users as $user)
             </div>
 
             <div class="col description-text"><?php echo $user->description ?>
+            <div class="col py-4"><?php echo $user->gender ?>
+            <div class="col py-4"><?php echo $user->sexuality ?>
+
+
 
             </div>
 

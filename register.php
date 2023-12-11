@@ -118,7 +118,7 @@ if (!empty($_POST["data"])){
 
             <div class="my-5">
                 <label class="py-2" for="email">Din e-mail</label>
-                <input class="form-control input-text border-0 shadow-sm" type="text" name="data[email]" id="email" placeholder="Indtast din e-mail" value="">
+                <input class="form-control input-text border-0 shadow-sm" type="email" name="data[email]" id="email" placeholder="Indtast din e-mail" value="">
             </div>
 
             <div class="my-5">
@@ -196,9 +196,16 @@ if (!empty($_POST["data"])){
                 </label>
 
                 <select class="form-select input-text border-0 shadow-sm" multiple name="data[myValues][]" id="myValues">
-                    <option>Vælg dine egne værdier</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
+                    <option value="1">Kommunikation</option>
+                    <option value="2">Familie og forpligtigelse</option>
+                    <option value="3">Ambitioner og mål</option>
+                    <option value="4">Sjov og humor</option>
+                    <option value="5">Ærlighed</option>
+                    <option value="6">Eventyr og oplevelser</option>
+                    <option value="7">Empati og medfølelse</option>
+                    <option value="8">Tolerance og ansvarlighed</option>
+                    <option value="9">Mod</option>
+                    <option value="10">Passion</option>
                 </select>
             </div>
 
@@ -211,9 +218,16 @@ if (!empty($_POST["data"])){
                 </label>
 
                 <select class="form-select input-text border-0 shadow-sm" multiple name="data[preferedValues][]" id="preferedValues">
-                    <option>Hvilke værdier søger du i en relation?</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
+                    <option value="1">Kommunikation</option>
+                    <option value="2">Familie og forpligtigelse</option>
+                    <option value="3">Ambitioner og mål</option>
+                    <option value="4">Sjov og humor</option>
+                    <option value="5">Ærlighed</option>
+                    <option value="6">Eventyr og oplevelser</option>
+                    <option value="7">Empati og medfølelse</option>
+                    <option value="8">Tolerance og ansvarlighed</option>
+                    <option value="9">Mod</option>
+                    <option value="10">Passion</option>
                 </select>
             </div>
 
@@ -251,52 +265,58 @@ if (!empty($_POST["data"])){
             </div>
 
             <div class="my-5">
-                <label class="py-2" for="question1">Spørgsmål 1</label>
+                <label class="py-2" for="question1">Har du prøvet at deltage i en ekstrem sport eller aktivitet?
+
+                </label>
 
                 <select class="form-select input-text border-0 shadow-sm" name="data[question1]" id="question1">
                     <option>Angiv dit svar</option>
-                    <option>1</option>
-                    <option>2</option>
+                    <option>Ja</option>
+                    <option>Nej</option>
                 </select>
             </div>
 
             <div class="my-5">
-                <label class="py-2" for="question2">Spørgsmål 2</label>
+                <label class="py-2" for="question2">Har du nogensinde holdt en fest, hvor du var den sidste, der gik i seng?
+
+                </label>
 
                 <select class="form-select input-text border-0 shadow-sm" name="data[question2]" id="question2">
                     <option>Angiv dit svar</option>
-                    <option>1</option>
-                    <option>2</option>
+                    <option>Ja</option>
+                    <option>Nej</option>
                 </select>
             </div>
 
             <div class="my-5">
-                <label class="py-2" for="question3">Spørgsmål 3</label>
+                <label class="py-2" for="question3">Har du nogensinde taget en spontan rejse uden at have planlagt noget på forhånd?</label>
 
                 <select class="form-select input-text border-0 shadow-sm" name="data[question3]" id="question3">
                     <option>Angiv dit svar</option>
-                    <option>1</option>
-                    <option>2</option>
+                    <option>Ja</option>
+                    <option>Nej</option>
                 </select>
             </div>
 
             <div class="my-5">
-                <label class="py-2" for="question4">Spørgsmål 4</label>
+                <label class="py-2" for="question4">Har du prøvet at lære et nyt sprog på egen hånd?
+                </label>
 
                 <select class="form-select input-text border-0 shadow-sm" name="data[question4]" id="question4">
                     <option>Angiv dit svar</option>
-                    <option>1</option>
-                    <option>2</option>
+                    <option>Ja</option>
+                    <option>Nej</option>
                 </select>
             </div>
 
             <div class="my-5">
-                <label class="py-2" for="question5">Spørgsmål 5</label>
+                <label class="py-2" for="question5">Har du nogensinde deltaget i frivilligt arbejde for en sag, du brænder for?
+                </label>
 
                 <select class="form-select input-text border-0 shadow-sm" name="data[question5]" id="question5">
                     <option>Angiv dit svar</option>
-                    <option>1</option>
-                    <option>2</option>
+                    <option>Ja</option>
+                    <option>Nej</option>
                 </select>
             </div>
 

@@ -29,7 +29,7 @@ $connectedUser = $db->sql($sql)[0];
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
+<body class="bg-grey">
 
 
 <main role="main" class="container-fluid pt-5">
@@ -180,7 +180,7 @@ $connectedUser = $db->sql($sql)[0];
                 <button class="btn shadow-sm yes-button" type="button">Ja</button>
 
                 <button class="btn shadow-sm quiz-navigation-btn quiz-navigation-btn-back" type="button" onclick="showPreviousTab()">Tilbage</button>
-                <button class="btn btn-dark-green shadow-sm quiz-navigation-btn quiz-navigation-btn-next" type="button" onclick="showNextTab()">Videre</button>
+                <a href="quizDone.php" class="btn btn-dark-green shadow-sm quiz-navigation-btn quiz-navigation-btn-next">Videre</a>
 
             </div>
         </div>
