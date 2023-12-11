@@ -10,7 +10,8 @@ if (!empty($_POST["data"])){
     }
 
     $sql = "INSERT INTO user (
-                       fullName, 
+                       firstName, 
+                       lastName, 
                        dateOfBirth, 
                        email, 
                        password, 
@@ -23,7 +24,9 @@ if (!empty($_POST["data"])){
                        preferedValues,
                        description,
                        profileImage) 
-                values(:fullName, 
+                values(
+                       :firstname, 
+                       :lastname, 
                        :dateOfBirth, 
                        :email, 
                        :password, 
@@ -37,7 +40,8 @@ if (!empty($_POST["data"])){
                        :description,
                        :profileImage)";
     $bind = [
-            ":fullName" => $data["fullName"],
+            ":firstname" => $data["firstname"],
+            ":lastname" => $data["lastname"],
             ":dateOfBirth" => $data["dateOfBirth"],
             ":email" => $data["email"],
             ":password" => $data["password"],
@@ -79,11 +83,6 @@ if (!empty($_POST["data"])){
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/ddc56212a6.js" crossorigin="anonymous"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -107,8 +106,13 @@ if (!empty($_POST["data"])){
 
 
             <div class="my-5">
-                <label class="py-2" for="fullName">Dit navn</label>
-                <input class="form-control input-text border-0 shadow-sm" type="text" name="data[fullName]" id="fullName" placeholder="Angiv dit for- og efternavn" value="">
+                <label class="py-2" for="fullName">Dit fornavn</label>
+                <input class="form-control input-text border-0 shadow-sm" type="text" name="data[firstname]" id="firstname" placeholder="Angiv dit fornavn" value="">
+            </div>
+
+            <div class="my-5">
+                <label class="py-2" for="fullName">Dit efternavn</label>
+                <input class="form-control input-text border-0 shadow-sm" type="text" name="data[lastname]" id="lastname" placeholder="Angiv dit efternavn" value="">
             </div>
 
             <div class="my-5">
@@ -133,8 +137,8 @@ if (!empty($_POST["data"])){
 
             <div class="d-flex justify-content-between my-3" role="tablist">
 
-                <a class="btn shadow-sm" href="index.php">Tilbage</a>
-                <button class="btn shadow-sm" type="button" onclick="showNextTab()">Videre</button>
+                <a class="btn btn-light shadow-sm" href="index.php">Tilbage</a>
+                <button class="btn btn-light shadow-sm" type="button" onclick="showNextTab()">Videre</button>
             </div>
 
         </div>
@@ -246,8 +250,8 @@ if (!empty($_POST["data"])){
             <div class="d-flex justify-content-between my-3" role="tablist">
 
 
-                <button class="btn shadow-sm" type="button" onclick="showPreviousTab()">Tilbage</button>
-                <button class="btn shadow-sm" type="button" onclick="showNextTab()">Videre</button>
+                <button class="btn btn-light shadow-sm" type="button" onclick="showPreviousTab()">Tilbage</button>
+                <button class="btn btn-light shadow-sm" type="button" onclick="showNextTab()">Videre</button>
             </div>
 
         </div>
@@ -322,8 +326,8 @@ if (!empty($_POST["data"])){
 
             <div class="d-flex justify-content-between my-3" role="tablist">
 
-                <button class="btn shadow-sm" type="button" onclick="showPreviousTab()">Tilbage</button>
-                <button class="btn shadow-sm" type="submit">Næste</button>
+                <button class="btn btn-light shadow-sm" type="button" onclick="showPreviousTab()">Tilbage</button>
+                <button class="btn btn-light shadow-sm" type="submit">Næste</button>
 
             </div>
 

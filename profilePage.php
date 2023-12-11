@@ -21,26 +21,24 @@ $users = $db->sql("SELECT * FROM user WHERE userId = " . $_COOKIE["userId"]);
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/ddc56212a6.js" crossorigin="anonymous"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body class="bg-grey">
+<div id="PageWrapper">
+
+<?php include "includes/header.php";?>
 
 <?php
 foreach ($users as $user)
 ?>
 
-<?php include "includes/header.php";?>
 
 
 <main role="main" class="container-fluid">
 
 
-    <div class="bg-white shadow-sm m-3 p-3">
+    <div class="bg-white shadow-sm m-3 p-3 rounded-3 border border-light-blue">
 
         <div id="ProfilePic" class="text-center mx-auto">
 
@@ -50,7 +48,7 @@ foreach ($users as $user)
 
         <div class="row text-center pt-3 pb-3">
 
-            <div class="col"><?php echo $user->fullName; ?></div>
+            <div class="col"><?php echo $user->firstname; ?></div>
             <div class="col"><?php echo $user->pronouns; ?></div>
             <div class="col"><?php
 
@@ -72,7 +70,7 @@ foreach ($users as $user)
             <div class="col-4 text-center">
 
                 <div class="fs-4">
-                    <i class="fa-solid fa-eye"></i>
+                    <i class="fa-solid fa-eye text-light-blue"></i>
                 </div>
 
                 <?php
@@ -89,7 +87,7 @@ foreach ($users as $user)
                 ?></div>
 
             <div class="col">
-                <ul>
+                <ul id="ValuesList">
 
                     <?php
 
@@ -108,16 +106,13 @@ foreach ($users as $user)
 
         <div class="row pt-3 pb-3">
             <div class="col-4 text-center fs-4">
-                <i class="fa-solid fa-circle-user"></i>
+                <i class="fa-solid fa-circle-user text-light-blue"></i>
             </div>
 
-            <div class="col description-text"><?php echo $user->description ?>
-            <div class="col py-4"><?php echo $user->gender ?>
-            <div class="col py-4"><?php echo $user->sexuality ?>
-
-
-
-            </div>
+                <div class="col description-text"><?php echo $user->description ?>
+                    <div class="py-2"><?php echo $user->gender ?></div>
+                    <div><?php echo $user->sexuality ?></div>
+                </div>
 
         </div>
 
@@ -128,6 +123,7 @@ foreach ($users as $user)
 
 <?php include "includes/bottomNavigation.php";?>
 
+</div>
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>

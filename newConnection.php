@@ -14,7 +14,7 @@ $connectedUser = $db->sql($sql)[0];
 <head>
     <meta charset="utf-8">
 
-    <title>Profilside</title>
+    <title>Ny relation</title>
 
     <meta name="robots" content="All">
     <meta name="author" content="Udgiver">
@@ -24,20 +24,19 @@ $connectedUser = $db->sql($sql)[0];
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/ddc56212a6.js" crossorigin="anonymous"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body class="bg-grey">
+<div id="PageWrapper">
 
+
+<?php include "includes/header.php";?>
 
 <main role="main" class="container-fluid">
 
 
-    <div class="row bg-white shadow-sm m-3 p-3 align-items-center flex-grow-1">
+    <div class="row bg-white shadow-sm m-3 p-3 rounded-3 border border-dark-green align-items-center flex-grow-1">
 
         <div class="col-5 my-5">
 
@@ -65,14 +64,24 @@ $connectedUser = $db->sql($sql)[0];
 
 
 
-    <div class="d-flex justify-content-between m-3 my-5" role="tablist">
+    <div class="d-flex justify-content-evenly p-3 pt-4" role="tablist">
 
+        <div class="btn-rounded">
+            <a class="btn btn-dark-green shadow-sm" href="">
+                <i class="fa-solid fa-comment-dots"></i>
+            </a>
+            Besked
+        </div>
+        <div class="btn-rounded">
 
-        <a class="btn shadow-sm" href="">Besked</a>
-        <a class="btn shadow-sm" href="quiz.php?connectedUser=<?php
+        <a class="btn btn-dark-green shadow-sm" href="quiz.php?connectedUser=<?php
         echo $connectedUser->userId;
 
-        ?>">Quiz</a>
+        ?>">
+            <i class="fa-solid fa-question"></i>
+        </a>
+        Quiz
+        </div>
     </div>
 
 
@@ -80,6 +89,7 @@ $connectedUser = $db->sql($sql)[0];
 </main>
 <?php include "includes/bottomNavigation.php";?>
 
+</div>
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
