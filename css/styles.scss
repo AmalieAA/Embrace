@@ -110,3 +110,63 @@ main {
 .question-icon{
 	font-size: 70px;
 }
+
+
+#fPPicture1{
+	position: absolute;
+	top: -20px;
+	left: -50px;
+	height: 250px;
+	width: 250px;
+	border-radius: 50%;
+	opacity: 50%;
+}
+
+#fPPicture2{
+	position: absolute;
+	top: 170px;
+	right: -50px;
+	height: 250px;
+	width: 250px;
+	border-radius: 50%;
+	opacity: 50%;
+}
+
+#fPPicture3{
+	position: absolute;
+	bottom: 150px;
+	left: -50px;
+	height: 250px;
+	width: 250px;
+	border-radius: 50%;
+	opacity: 50%;
+}
+
+#fPPicture4{
+	position: absolute;
+	bottom: -40px;
+	right: -50px;
+	height: 250px;
+	width: 250px;
+	border-radius: 50%;
+	opacity: 50%;
+}
+
+.greenButton{
+	position: absolute;
+	width: 220px;
+	bottom: 60px;
+}
+
+.blueBotton1{
+	position: absolute;
+	bottom: 15px;
+	left: 50px;
+}
+
+.blueBotton2{
+	position: absolute;
+	bottom: 15px;
+	right: 50px;
+}
+

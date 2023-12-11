@@ -54,7 +54,7 @@
     <div class="d-flex justify-content-between m-3 my-5" role="tablist">
 
 
-        <a class="btn shadow-sm" href="">Tilbage</a>
+        <a class="btn shadow-sm" href="frontPage.php">Tilbage</a>
         <a class="btn shadow-sm" style="background-color: #6BA27D" href="register.php">Opret profil</a>
     </div>
 
@@ -67,5 +67,7 @@
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
 
 
