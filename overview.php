@@ -28,11 +28,14 @@ $users = $db->sql($sql, $bind);
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/ddc56212a6.js" crossorigin="anonymous"></script>
+    <script src="js/themeToggle.js"></script>
+    <script src="js/fontToggle.js"></script>
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body class="bg-grey">
+<body class="bg-light-green">
     <div id="PageWrapper">
 
         <?php include "includes/header.php";?>
@@ -46,17 +49,17 @@ $users = $db->sql($sql, $bind);
 
             <div class="bg-white shadow-sm m-3 p-3 flex-grow-1 rounded-3 border border-light-blue">
 
-                <div id="ProfilePic" class="text-center mx-auto">
+                <div id="ProfilePic" class="text-center mx-auto image-blur mt-2">
 
                     <img class="img-fluid" src="uploads/<?php echo $user->profileImage; ?>">
 
                 </div>
 
-                <div class="row text-center pt-3 pb-5">
+                <div class="text-center py-3">
 
-                    <div class="col"><?php echo $user->firstname; ?></div>
-                    <div class="col"><?php echo $user->pronouns; ?></div>
-                    <div class="col"><?php
+                    <div class="fs-4">
+                        <?php echo $user->firstname; ?>,
+                        <span class="fs-6"><?php
 
                         $today = date('Y-m-d');
 
@@ -64,24 +67,23 @@ $users = $db->sql($sql, $bind);
                         $age = date_diff(date_create($user->dateOfBirth), date_create($today))->y;
 
                         echo $age;
-                        ?>
+                            ?></span>
                     </div>
+                    <div class="fs-7"><?php echo $user->pronouns; ?></div>
 
                 </div>
 
-                <div class="row pt-3 pb-5">
+                <div class="pt-2 pb-5">
 
+                    <div class="text-center">
 
-
-                    <div class="col-4 text-center">
-
-                        <div class="fs-4">
-                            <i class="fa-solid fa-eye text-light-blue"></i>
+                        <div class="mb-2">
+                            <i class="fa-solid fa-eye fa-2x text-light-blue"></i>
                         </div>
 
                         <?php
                         if($user->lookingForFriendship == 1 && $user->lookingForRelationship == 1){
-                            echo "Forhold <br> & <br> relationer";
+                            echo "Forhold & relationer";
                         }
                         elseif ($user->lookingForFriendship == 1){
                             echo "Relationer";
@@ -92,8 +94,8 @@ $users = $db->sql($sql, $bind);
 
                         ?></div>
 
-                    <div class="col">
-                        <ul id="ValuesList">
+                    <div class="py-3">
+                        <ul id="ValuesList" class="row fs-7">
 
                             <?php
 
@@ -101,7 +103,7 @@ $users = $db->sql($sql, $bind);
 
                             foreach ($splitValues as $value) {
 
-                                echo "<li>" . $value . "</li>";
+                                echo "<li class='col-6'>" . $value . "</li>";
                             }
 
                             ?>

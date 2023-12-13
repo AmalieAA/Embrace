@@ -12,11 +12,13 @@
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/ddc56212a6.js" crossorigin="anonymous"></script>
+    <script src="js/themeToggle.js"></script>
+    <script src="js/fontToggle.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
+<body class="bg-light-green">
 <div id="PageWrapper">
 <?php include "includes/header.php";?>
 

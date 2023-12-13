@@ -12,14 +12,19 @@
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/ddc56212a6.js" crossorigin="anonymous"></script>
+    <script src="js/themeToggle.js"></script>
+    <script src="js/fontToggle.js"></script>
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body class="bg-light-green">
 
+<?php include "includes/header.php";?>
 
-    <div class="container-fluid">
+
+    <main role="main" class="container-fluid pt-0">
         <div class="min-vh-100 text-center d-flex flex-column justify-content-center p-3">
 
             <div id="ProcesBar" class="row p-4">
@@ -48,9 +53,8 @@
             </div>
 
         </div>
-    </div>
+    </main>
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
 
 </body>
 </html>

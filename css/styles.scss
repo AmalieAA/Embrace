@@ -14,8 +14,14 @@ $custom-colors: (
 	"dark-green": #76A17F,
 	"light-green": #D5E1C9,
 	"light-blue": #88AAD3,
-	"grey": #FAFAFA
-
+				
+	"light-green-redgreenblind": #E3DECB,
+	"dark-green-redgreenblind": #999481,
+	"light-blue-redgreenblind": #92A3D2,
+				
+	"light-green-blueyellowblind": #D3E2DD,
+	"dark-green-blueyellowblind": #6FA098,
+	"light-blue-blueyellowblind": #76B1B8,
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
@@ -23,6 +29,66 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "bootstrapComponents";
 
 // 5. Du kan lave styling her...
+body {
+	font-family: "Verdana", "SansSerif";
+}
+
+html[data-font="comic-sans"] body{
+	font-family: "Comic Sans MS", SansSerif;
+}
+
+html[data-theme="GreenRedBlind"] {
+	--bs-light-blue: var(--bs-light-blue-redgreenblind);
+	--bs-light-blue-rgb: var(--bs-light-blue-redgreenblind-rgb);
+	
+	--bs-light-green: var(--bs-light-green-redgreenblind);
+	--bs-light-green-rgb: var(--bs-light-green-redgreenblind-rgb);
+
+	--bs-dark-green: var(--bs-dark-green-redgreenblind);
+	--bs-dark-green-rgb: var(--bs-dark-green-redgreenblind-rgb);
+
+	& .btn-dark-green {
+		--bs-btn-bg: var(--bs-dark-green-redgreenblind);
+		--bs-btn-border-color: var(--bs-dark-green-redgreenblind);
+		--bs-btn-hover-bg: var(--bs-dark-green-redgreenblind);
+		--bs-btn-hover-border-color: var(--bs-dark-green-redgreenblind);
+		--bs-btn-active-bg: var(--bs-dark-green-redgreenblind);
+		--bs-btn-active-border-color: var(--bs-dark-green-redgreenblind);
+		--bs-btn-disabled-color: #000;
+		--bs-btn-disabled-bg: var(--bs-dark-green-redgreenblind);
+		--bs-btn-disabled-border-color: var(--bs-dark-green-redgreenblind);
+	}
+}
+html[data-theme="BlueYellowBlind"] {
+	--bs-light-blue: var(--bs-light-blue-blueyellowblind);
+	--bs-light-blue-rgb: var(--bs-light-blue-blueyellowblind-rgb);
+	
+	--bs-light-green: var(--bs-light-green-blueyellowblind);
+	--bs-light-green-rgb: var(--bs-light-green-blueyellowblind-rgb);
+
+	--bs-dark-green: var(--bs-dark-green-blueyellowblind);
+	--bs-dark-green-rgb: var(--bs-dark-green-blueyellowblind-rgb);
+
+	& .btn-dark-green {
+		--bs-btn-bg: var(--bs-dark-green-blueyellowblind);
+		--bs-btn-border-color: var(--bs-dark-green-blueyellowblind);
+		--bs-btn-hover-bg: var(--bs-dark-green-blueyellowblind);
+		--bs-btn-hover-border-color: var(--bs-dark-green-blueyellowblind);
+		--bs-btn-active-bg: var(--bs-dark-green-blueyellowblind);
+		--bs-btn-active-border-color: var(--bs-dark-green-blueyellowblind);
+		--bs-btn-disabled-color: #000;
+		--bs-btn-disabled-bg: var(--bs-dark-green-blueyellowblind);
+		--bs-btn-disabled-border-color: var(--bs-dark-green-blueyellowblind);
+	}
+}
+
+.fs-7 {
+	font-size: 0.75rem;
+}
+
+.fs-8 {
+	font-size: 0.5rem;
+}
 
 .input-text{
 	font-size: 0.7em;
@@ -47,10 +113,10 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 	top: 0;
 	left: 0;
 	opacity: .25;
-	background-image: url("../images/forsidebaggrund.png");
-	/*background-size: 225px;*/
+	background-image: url("../images/forsidebaggrund2.png");
+	background-size: 225px;
 	background-size: 100vw;
-	background-repeat: no-repeat;
+	background-repeat: repeat;
 }
 
 .label-subtitle{
@@ -81,9 +147,13 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 	border: 8px solid var(--bs-light-blue);
 }
 
+.image-blur {
+	filter: blur(5px);
+}
+
 .new-match-pic{
-	height: 100px;
-	width: 100px;
+	height: 140px;
+	width: 140px;
 	border-radius: 50%;
 	object-fit: contain;
 	overflow: hidden;
@@ -107,14 +177,14 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 	gap: .5rem;
 	font-size: .7em;
 	& .btn {
-		--btn-rounded-size: 64px;
+		--btn-rounded-size: 80px;
 		--bs-btn-color: var(--bs-btn-bg);
 		--bs-box-shadow: 0 0.5rem 1rem currentColor;
 		--bs-box-shadow-sm: 0 0.125rem 0.25rem currentColor;
 		background-color: white;
 		border: none;
 		border-radius: 50%;
-		font-size: 1.5rem;
+		font-size: 2rem;
 		padding: 0;
 		width: var(--btn-rounded-size);
 		height: var(--btn-rounded-size);
@@ -140,10 +210,6 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 	width: 150px;
 }
 
-body {
-	font-family: "Verdana", "SansSerif";
-}
-
 #PageWrapper {
 	display: grid;
 	grid-template-columns: 1fr;
@@ -158,14 +224,13 @@ body {
 	& > * {
 	}
 }
-header {
-}
 main {
 	grid-area: main;
 	display: flex;
 	flex-direction: column;
 	overflow-y: auto;
 	max-height: 100%;
+	padding-top: 1rem;
 }
 #QuizTabs {
 	flex-grow: 1;
@@ -178,6 +243,10 @@ main {
 	flex-grow: 1;
 	& > div:first-child {
 		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		font-size: 1.25rem;
 	}
 }
 
@@ -190,51 +259,7 @@ main {
 .quiz-navigation-btn {
 	border-width: 0;
 }
-.description-text{
-	padding-inline-start: 30px;
-}
 
 .question-icon{
 	font-size: 70px;
-}
-
-
-#fPPicture1{
-	position: absolute;
-	top: -20px;
-	left: -50px;
-	height: 250px;
-	width: 250px;
-	border-radius: 50%;
-	opacity: 50%;
-}
-
-#fPPicture2{
-	position: absolute;
-	top: 170px;
-	right: -50px;
-	height: 250px;
-	width: 250px;
-	border-radius: 50%;
-	opacity: 50%;
-}
-
-#fPPicture3{
-	position: absolute;
-	bottom: 150px;
-	left: -50px;
-	height: 250px;
-	width: 250px;
-	border-radius: 50%;
-	opacity: 50%;
-}
-
-#fPPicture4{
-	position: absolute;
-	bottom: -40px;
-	right: -50px;
-	height: 250px;
-	width: 250px;
-	border-radius: 50%;
-	opacity: 50%;
 }

@@ -12,20 +12,23 @@
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/ddc56212a6.js" crossorigin="anonymous"></script>
+    <script src="js/themeToggle.js"></script>
+    <script src="js/fontToggle.js"></script>
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body class="bg-grey">
+<body class="bg-light-green">
 <div id="PageWrapper">
 
 <?php include "includes/header.php";?>
 
 <main role="main" class="container-fluid">
 
-    <div class="bg-white shadow-sm text-center m-3 p-3 flex-grow-1 rounded-3 border border-dark-green">
+    <div class="d-flex flex-column fs-5 justify-content-center bg-white shadow-sm text-center m-3 p-3 flex-grow-1 rounded-3 border border-dark-green">
 
-        <div class="question-icon my-5">
+        <div class="question-icon mb-5">
             <i class="fa-solid fa-handshake text-dark-green"></i>
         </div>
 

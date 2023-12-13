@@ -23,11 +23,14 @@ $connectedUser = $db->sql($sql)[0];
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/ddc56212a6.js" crossorigin="anonymous"></script>
+    <script src="js/themeToggle.js"></script>
+    <script src="js/fontToggle.js"></script>
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body class="bg-grey">
+<body class="bg-light-green">
 <div id="PageWrapper">
 
 
@@ -36,25 +39,27 @@ $connectedUser = $db->sql($sql)[0];
 <main role="main" class="container-fluid">
 
 
-    <div class="row bg-white shadow-sm m-3 p-3 rounded-3 border border-dark-green align-items-center flex-grow-1">
+    <div class="d-flex flex-column justify-content-center bg-white shadow-sm m-3 p-3 rounded-3 border border-dark-green flex-grow-1">
 
-        <div class="col-5 my-5">
+        <div class="row align-items-center gx-0 mb-5">
+            <div class="col">
 
-            <div class="new-match-pic text-center mx-auto">
-                <img class="img-fluid" src="uploads/<?php echo $connectedUser->profileImage; ?>">
-            </div>
-        </div>
-
-        <div class="col-2 text-center">
-            <i class="fa-solid fa-plus"></i>
-        </div>
-
-        <div class="col-5">
-
-            <div class="new-match-pic text-center mx-auto">
-                <img class="img-fluid" src="uploads/<?php echo $currentUser->profileImage; ?>">
+                <div class="new-match-pic text-center mx-auto">
+                    <img class="img-fluid" src="uploads/<?php echo $connectedUser->profileImage; ?>">
+                </div>
             </div>
 
+            <div class="col-auto text-center">
+                <i class="fa-solid fa-plus fa-2x text-dark-green"></i>
+            </div>
+
+            <div class="col">
+
+                <div class="new-match-pic text-center mx-auto">
+                    <img class="img-fluid" src="uploads/<?php echo $currentUser->profileImage; ?>">
+                </div>
+
+            </div>
         </div>
 
         <div class="text-center">

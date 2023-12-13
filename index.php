@@ -12,6 +12,9 @@
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/ddc56212a6.js" crossorigin="anonymous"></script>
+    <script src="js/themeToggle.js"></script>
+    <script src="js/fontToggle.js"></script>
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -34,10 +37,10 @@
     </div>
 
     <div class="d-flex flex-column gap-3 justify-content-center p-3 " role="tablist">
-        <a class="btn btn-dark-green shadow-sm w-100" href="register.php">Opret profil</a>
+        <a class="btn btn-light-blue shadow-sm w-100" href="register.php">Opret profil</a>
         <div class="d-flex gap-3">
-            <a class="btn btn-light-blue shadow-sm flex-grow-1" href="overview.php">Log ind</a>
-            <a class="btn btn-light-blue shadow-sm flex-grow-1" href="aboutUs.php">Om os</a>
+            <a class="btn btn-dark-green shadow-sm flex-grow-1" href="overview.php">Log ind</a>
+            <a class="btn btn-dark-green shadow-sm flex-grow-1" href="aboutUs.php">Om os</a>
         </div>
     </div>
 

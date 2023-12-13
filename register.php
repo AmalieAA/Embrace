@@ -82,14 +82,19 @@ if (!empty($_POST["data"])){
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/ddc56212a6.js" crossorigin="anonymous"></script>
+    <script src="js/themeToggle.js"></script>
+    <script src="js/fontToggle.js"></script>
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body class="bg-light-green">
 
+<?php include "includes/header.php";?>
 
-<main role="main" class="container-fluid">
+
+<main role="main" class="container-fluid pt-0">
     <form id="RegisterForm" class="p-3 tab-content" method="post" action="register.php" enctype="multipart/form-data">
 
         <div class="tab-pane fade show active" id="create-account">

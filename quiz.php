@@ -21,11 +21,14 @@ $connectedUser = $db->sql($sql)[0];
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/ddc56212a6.js" crossorigin="anonymous"></script>
+    <script src="js/themeToggle.js"></script>
+    <script src="js/fontToggle.js"></script>
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body class="bg-grey">
+<body class="bg-light-green">
 <div id="PageWrapper">
 
 <?php include "includes/header.php";?>
@@ -37,11 +40,11 @@ $connectedUser = $db->sql($sql)[0];
 
             <div class="bg-white shadow-sm text-center m-3 p-3 rounded-3 border border-dark-green">
 
-                <div class="question-icon my-5">
-                    <i class="fa-solid fa-question text-dark-green"></i>
+                <div class="question-icon mb-5">
+                    <i class="fa-solid fa-person-snowboarding text-dark-green"></i>
                 </div>
 
-                Har du prøvet at deltage i en ekstrem sport eller aktivitet?
+                Tror du at <?php echo $connectedUser->firstname?> har prøvet at deltage i en ekstrem sport eller aktivitet?
                 <br>
                 <br>
                 <div class="quiz-answer quiz-answer-correct">
@@ -91,11 +94,11 @@ $connectedUser = $db->sql($sql)[0];
 
             <div class="bg-white shadow-sm text-center m-3 p-3 rounded-3 border border-dark-green">
 
-                <div class="question-icon my-5">
-                    <i class="fa-solid fa-question text-dark-green"></i>
+                <div class="question-icon mb-5">
+                    <i class="fa-solid fa-champagne-glasses text-dark-green"></i>
                 </div>
 
-                Har du nogensinde holdt en fest, hvor du var den sidste, der gik i seng?
+                Har <?php echo $connectedUser->firstname?> nogensinde holdt en fest og var den sidste, der gik i seng?
                 <br>
                 <br>
                 <div class="quiz-answer quiz-answer-correct">
@@ -145,11 +148,11 @@ $connectedUser = $db->sql($sql)[0];
 
             <div class="bg-white shadow-sm text-center m-3 p-3 rounded-3 border border-dark-green">
 
-                <div class="question-icon my-5">
-                    <i class="fa-solid fa-question text-dark-green"></i>
+                <div class="question-icon mb-5">
+                    <i class="fa-solid fa-plane-departure text-dark-green"></i>
                 </div>
 
-                Har du nogensinde taget en spontan rejse uden at have planlagt noget på forhånd?</label>
+                Er <?php echo $connectedUser->firstname?> typen der har taget på en spontan rejse uden at have planlagt noget på forhånd?</label>
                 <br>
                 <br>
                 <div class="quiz-answer quiz-answer-correct">
@@ -199,11 +202,11 @@ $connectedUser = $db->sql($sql)[0];
 
             <div class="bg-white shadow-sm text-center m-3 p-3 rounded-3 border border-dark-green">
 
-                <div class="question-icon my-5">
-                    <i class="fa-solid fa-question text-dark-green"></i>
+                <div class="question-icon mb-5">
+                    <i class="fa-solid fa-hands-asl-interpreting text-dark-green"></i>
                 </div>
 
-                Har du prøvet at lære et nyt sprog på egen hånd?
+                Har <?php echo $connectedUser->firstname?> kastet sig ud i at lære et nyt sprog på egen hånd?
                 <br>
                 <br>
                 <div class="quiz-answer quiz-answer-correct">
@@ -253,11 +256,11 @@ $connectedUser = $db->sql($sql)[0];
 
             <div class="bg-white shadow-sm text-center m-3 p-3 rounded-3 border border-dark-green">
 
-                <div class="question-icon my-5">
-                    <i class="fa-solid fa-question text-dark-green"></i>
+                <div class="question-icon mb-5">
+                    <i class="fa-solid fa-handshake-angle text-dark-green"></i>
                 </div>
 
-                Har du nogensinde deltaget i frivilligt arbejde for en sag, du brænder for?
+                Har <?php echo $connectedUser->firstname?> nogensinde deltaget i frivilligt arbejde for en sag, som vedkommende brænder for?
                 <br>
                 <br>
                 <div class="quiz-answer quiz-answer-correct">

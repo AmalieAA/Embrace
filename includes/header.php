@@ -35,7 +35,7 @@ if(count($headerUsers) > 0) {
 
 
 <?php if(isset($headerUser)) { ?>
-<div class="offcanvas offcanvas-end" tabindex="-1" id="AppSettings" aria-labelledby="offcanvasExampleLabel">
+<div class="offcanvas offcanvas-end bg-light-green" tabindex="-1" id="AppSettings" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasExampleLabel">
             <img width="64" class="img-fluid rounded-circle" src="uploads/<?php echo $headerUser->profileImage ?>" />
@@ -43,19 +43,34 @@ if(count($headerUsers) > 0) {
         </h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
+
+
+
     <div class="offcanvas-body d-flex flex-column">
-        <div>
-            <label for="ThemeSelector">Change theme</label>
+        <div  class="my-2">
+            <label for="ThemeSelector">Skift farvetema</label>
             <select id="ThemeSelector" class="form-select">
-                <option value="" selected>Default</option>
-                <option value="GreenBlind">Grønblind</option>
-                <option value="RedBlind">Rødblind</option>
+                <option value="">Standard</option>
+                <option value="GreenRedBlind">Grøn/rød blind</option>
+                <option value="BlueYellowBlind">Blå/gul blind</option>
             </select>
         </div>
+
+
+            <div class="my-2">
+                <label for="FontSelector">Skift skriftype</label>
+                <select id="FontSelector" class="form-select">
+                    <option value="">Standard</option>
+                    <option value="comic-sans">Comic sans</option>
+                </select>
+            </div>
+
+
+
         <div class="flex-grow-1"></div>
         <div class="my-2">
             <a class="btn btn-dark-green w-100" href="index.php">
-                Logud
+                Log ud
             </a>
         </div>
     </div>
