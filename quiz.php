@@ -20,6 +20,11 @@ $connectedUser = $db->sql($sql)[0];
 
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=Mooli&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/ddc56212a6.js" crossorigin="anonymous"></script>
     <script src="js/themeToggle.js"></script>
     <script src="js/fontToggle.js"></script>
@@ -44,16 +49,22 @@ $connectedUser = $db->sql($sql)[0];
                     <i class="fa-solid fa-person-snowboarding text-dark-green"></i>
                 </div>
 
-                Tror du at <?php echo $connectedUser->firstname?> har prøvet at deltage i en ekstrem sport eller aktivitet?
+                <p>
+                    Tror du at <?php echo $connectedUser->firstname?> har prøvet at deltage i en ekstrem sport eller aktivitet?
+                </p>
                 <br>
                 <br>
                 <div class="quiz-answer quiz-answer-correct">
                     <i class="fa-solid fa-circle-check text-dark-green"></i>
-                    Korrekt! <?php echo $connectedUser->firstname?> svarede også <?php echo $connectedUser->question1?> på denne.
+                    <p>
+                        Korrekt! <?php echo $connectedUser->firstname?> svarede også <?php echo $connectedUser->question1?> på denne.
+                    </p>
                 </div>
                 <div class="quiz-answer quiz-answer-wrong">
                     <i class="fa-solid fa-circle-xmark"></i>
-                    Desværre, <?php echo $connectedUser->firstname?> svarede <?php echo $connectedUser->question1?> på denne.
+                    <p>
+                        Desværre, <?php echo $connectedUser->firstname?> svarede <?php echo $connectedUser->question1?> på denne.
+                    </p>
                 </div>
             </div>
 
@@ -98,16 +109,22 @@ $connectedUser = $db->sql($sql)[0];
                     <i class="fa-solid fa-champagne-glasses text-dark-green"></i>
                 </div>
 
-                Har <?php echo $connectedUser->firstname?> nogensinde holdt en fest og var den sidste, der gik i seng?
+                <p>
+                    Har <?php echo $connectedUser->firstname?> nogensinde holdt en fest og var den sidste, der gik i seng?
+                </p>
                 <br>
                 <br>
                 <div class="quiz-answer quiz-answer-correct">
                     <i class="fa-solid fa-circle-check text-dark-green"></i>
-                    Korrekt! <?php echo $connectedUser->firstname?> svarede også <?php echo $connectedUser->question2?> på denne.
+                    <p>
+                        Korrekt! <?php echo $connectedUser->firstname?> svarede også <?php echo $connectedUser->question2?> på denne.
+                    </p>
                 </div>
                 <div class="quiz-answer quiz-answer-wrong">
                     <i class="fa-solid fa-circle-xmark"></i>
-                    Desværre, <?php echo $connectedUser->firstname?> svarede <?php echo $connectedUser->question2?> på denne.
+                    <p>
+                        Desværre, <?php echo $connectedUser->firstname?> svarede <?php echo $connectedUser->question2?> på denne.
+                    </p>
                 </div>
             </div>
 
@@ -152,16 +169,22 @@ $connectedUser = $db->sql($sql)[0];
                     <i class="fa-solid fa-plane-departure text-dark-green"></i>
                 </div>
 
-                Er <?php echo $connectedUser->firstname?> typen der har taget på en spontan rejse uden at have planlagt noget på forhånd?</label>
+               <p>
+                    Er <?php echo $connectedUser->firstname?> typen der har taget på en spontan rejse uden at have planlagt noget på forhånd?
+               </p>
                 <br>
                 <br>
                 <div class="quiz-answer quiz-answer-correct">
                     <i class="fa-solid fa-circle-check text-dark-green"></i>
-                    Korrekt! <?php echo $connectedUser->firstname?> svarede også <?php echo $connectedUser->question3?> på denne.
+                    <p>
+                        Korrekt! <?php echo $connectedUser->firstname?> svarede også <?php echo $connectedUser->question3?> på denne.
+                    </p>
                 </div>
                 <div class="quiz-answer quiz-answer-wrong">
                     <i class="fa-solid fa-circle-xmark"></i>
-                    Desværre, <?php echo $connectedUser->firstname?> svarede <?php echo $connectedUser->question3?> på denne.
+                    <p>
+                        Desværre, <?php echo $connectedUser->firstname?> svarede <?php echo $connectedUser->question3?> på denne.
+                    </p>
                 </div>
             </div>
 
@@ -206,16 +229,25 @@ $connectedUser = $db->sql($sql)[0];
                     <i class="fa-solid fa-hands-asl-interpreting text-dark-green"></i>
                 </div>
 
-                Har <?php echo $connectedUser->firstname?> kastet sig ud i at lære et nyt sprog på egen hånd?
+               <p>
+                   Har <?php echo $connectedUser->firstname?> kastet sig ud i at lære et nyt sprog på egen hånd?
+               </p>
+
                 <br>
                 <br>
                 <div class="quiz-answer quiz-answer-correct">
                     <i class="fa-solid fa-circle-check text-dark-green"></i>
-                    Korrekt! <?php echo $connectedUser->firstname?> svarede også <?php echo $connectedUser->question4?> på denne.
+
+                    <p>
+                        Korrekt! <?php echo $connectedUser->firstname?> svarede også <?php echo $connectedUser->question4?> på denne.
+                    </p>
                 </div>
                 <div class="quiz-answer quiz-answer-wrong">
                     <i class="fa-solid fa-circle-xmark"></i>
-                    Desværre, <?php echo $connectedUser->firstname?> svarede <?php echo $connectedUser->question4?> på denne.
+
+                    <p>
+                        Desværre, <?php echo $connectedUser->firstname?> svarede <?php echo $connectedUser->question4?> på denne.
+                    </p>
                 </div>
             </div>
 
@@ -260,16 +292,22 @@ $connectedUser = $db->sql($sql)[0];
                     <i class="fa-solid fa-handshake-angle text-dark-green"></i>
                 </div>
 
-                Har <?php echo $connectedUser->firstname?> nogensinde deltaget i frivilligt arbejde for en sag, som vedkommende brænder for?
+                <p>
+                    Har <?php echo $connectedUser->firstname?> nogensinde deltaget i frivilligt arbejde for en sag, som vedkommende brænder for?
+                </p>
                 <br>
                 <br>
                 <div class="quiz-answer quiz-answer-correct">
                     <i class="fa-solid fa-circle-check text-dark-green"></i>
-                    Korrekt! <?php echo $connectedUser->firstname?> svarede også <?php echo $connectedUser->question5?> på denne.
+                    <p>
+                        Korrekt! <?php echo $connectedUser->firstname?> svarede også <?php echo $connectedUser->question5?> på denne.
+                    </p>
                 </div>
                 <div class="quiz-answer quiz-answer-wrong">
                     <i class="fa-solid fa-circle-xmark"></i>
-                    Desværre, <?php echo $connectedUser->firstname?> svarede <?php echo $connectedUser->question5?> på denne.
+                    <p>
+                        Desværre, <?php echo $connectedUser->firstname?> svarede <?php echo $connectedUser->question5?> på denne.
+                    </p>
                 </div>
             </div>
 

@@ -27,6 +27,11 @@ $users = $db->sql($sql, $bind);
 
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=Mooli&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/ddc56212a6.js" crossorigin="anonymous"></script>
     <script src="js/themeToggle.js"></script>
     <script src="js/fontToggle.js"></script>
@@ -49,9 +54,9 @@ $users = $db->sql($sql, $bind);
 
             <div class="bg-white shadow-sm m-3 p-3 flex-grow-1 rounded-3 border border-light-blue">
 
-                <div id="ProfilePic" class="text-center mx-auto image-blur mt-2">
+                <div id="ProfilePic" class="text-center mx-auto  mt-2">
 
-                    <img class="img-fluid" src="uploads/<?php echo $user->profileImage; ?>">
+                    <img class="img-fluid image-blur" src="uploads/<?php echo $user->profileImage; ?>" alt="Profilbillede">
 
                 </div>
 

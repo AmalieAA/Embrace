@@ -3,27 +3,28 @@ if(isset($db) == false) {
     require "settings/init.php";
 }
 
-$headerUsers = $db->sql("SELECT * FROM user WHERE userId = " . $_COOKIE["userId"]);
+if(!empty($_COOKIE["userId"])) {
+    $headerUsers = $db->sql("SELECT * FROM user WHERE userId = " . $_COOKIE["userId"]);
 
-if(count($headerUsers) > 0) {
-    $headerUser = $db->sql("SELECT * FROM user WHERE userId = " . $_COOKIE["userId"])[0];
+    if (count($headerUsers) > 0) {
+        $headerUser = $headerUsers[0];
+    }
 }
-
 ?>
 
 <header role="banner" class="py-2">
-        <div class="d-flex justify-content-around align-items-center text-center fs-4 p-1">
-            <div>
+        <div class="row g-0 align-items-center text-center fs-4 p-1">
+            <div class="col">
                 <a onclick="history.back()">
                     <i class="fa-solid fa-chevron-left text-dark-green"></i>
                 </a>
             </div>
 
-            <div>
-                <img id="Logo" class="img-fluid" src="images/logo.png" />
+            <div class="col">
+                <img id="Logo" class="img-fluid" src="images/logo.png" alt="Logo af embrace" />
             </div>
 
-            <div>
+            <div class="col">
             <?php if(isset($headerUser)) { ?>
                 <button class="btn-no-styling" type="button" data-bs-toggle="offcanvas" data-bs-target="#AppSettings">
                     <i class="fa-solid fa-ellipsis text-dark-green"></i>

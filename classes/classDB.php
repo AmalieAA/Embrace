@@ -106,14 +106,12 @@ class db {
             return $this->prepare_result;
         }catch (Exception $e){
             // Testmode viser fejl og sidste kørte SQL
-            if (CONFIG_LIVE == "0") {
+
                 $output = "<strong>Error message: </strong>".$e->getMessage()."<br><br>";
                 $output .= "<strong>In file:</strong> ".$e->getFile().":".$e->getLine()."<br><br>";
                 $output .= "<strong>Stack trace:</strong><pre>".$e->getTraceAsString()."</pre>";
                 $output .= "<strong>Last SQL query:</strong><br><code>" . $this->lastQuery . "</code><br>";
-            } else {
-                $output = "An error has occurred in the database.";
-            }
+
             echo $output;
             exit;
         }

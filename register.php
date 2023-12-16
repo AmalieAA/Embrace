@@ -23,7 +23,13 @@ if (!empty($_POST["data"])){
                        myValues, 
                        preferedValues,
                        description,
-                       profileImage) 
+                       profileImage,
+                       question1,
+                       question2,
+                       question3,
+                       question4,
+                       question5)
+                                     
                 values(
                        :firstname, 
                        :lastname, 
@@ -38,7 +44,12 @@ if (!empty($_POST["data"])){
                        :myValues, 
                        :preferedValues,
                        :description,
-                       :profileImage)";
+                       :profileImage,
+                       :question1,
+                       :question2,
+                       :question3,
+                       :question4,
+                       :question5)";
     $bind = [
             ":firstname" => $data["firstname"],
             ":lastname" => $data["lastname"],
@@ -54,6 +65,12 @@ if (!empty($_POST["data"])){
             ":preferedValues" => join("+",$data["preferedValues"]),
             ":description" => $data["description"],
             ":profileImage" => (!empty($file["profileImage"]["tmp_name"])) ? $file["profileImage"]["name"] : null,
+            ":question1" => $data["question1"],
+            ":question2" => $data["question2"],
+            ":question3" => $data["question3"],
+            ":question4" => $data["question4"],
+            ":question5" => $data["question5"],
+
     ];
 
     $db->sql($sql, $bind, false);
@@ -81,6 +98,11 @@ if (!empty($_POST["data"])){
 
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=Mooli&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/ddc56212a6.js" crossorigin="anonymous"></script>
     <script src="js/themeToggle.js"></script>
     <script src="js/fontToggle.js"></script>
@@ -143,7 +165,7 @@ if (!empty($_POST["data"])){
             <div class="d-flex justify-content-between my-3" role="tablist">
 
                 <a class="btn btn-light shadow-sm" href="index.php">Tilbage</a>
-                <button class="btn btn-light shadow-sm" type="button" onclick="showNextTab()">Videre</button>
+                <button class="btn btn-light-blue shadow-sm" type="button" onclick="showNextTab()">Videre</button>
             </div>
 
         </div>
@@ -161,7 +183,11 @@ if (!empty($_POST["data"])){
             </div>
 
             <div class="my-5">
-                <label class="py-2" for="gender">Køn</label>
+                <label class="py-2" for="gender">Køn
+                    <span class="label-subtitle">
+                             Valgfrit
+                    </span>
+                </label>
                 <input class="form-control input-text border-0 shadow-sm" type="text" name="data[gender]" id="gender" placeholder="Angiv din kønsidentitet" value="">
             </div>
 
@@ -171,7 +197,11 @@ if (!empty($_POST["data"])){
             </div>
 
             <div class="my-5">
-                <label class="py-2" for="sexuality">Seksualitet</label>
+                <label class="py-2" for="sexuality">Seksualitet
+                    <span class="label-subtitle">
+                             Valgfrit
+                    </span>
+                </label>
                 <input class="form-control input-text border-0 shadow-sm" type="text" name="data[sexuality]" id="sexuality" placeholder="Indtast din seksualitet" value="">
             </div>
 
@@ -205,16 +235,16 @@ if (!empty($_POST["data"])){
                 </label>
 
                 <select class="form-select input-text border-0 shadow-sm" multiple name="data[myValues][]" id="myValues">
-                    <option value="1">Kommunikation</option>
-                    <option value="2">Familie og forpligtigelse</option>
-                    <option value="3">Ambitioner og mål</option>
-                    <option value="4">Sjov og humor</option>
-                    <option value="5">Ærlighed</option>
-                    <option value="6">Eventyr og oplevelser</option>
-                    <option value="7">Empati og medfølelse</option>
-                    <option value="8">Tolerance og ansvarlighed</option>
-                    <option value="9">Mod</option>
-                    <option value="10">Passion</option>
+                    <option value="Kommunikation">Kommunikation</option>
+                    <option value="Familie og forpligtigelse">Familie og forpligtigelse</option>
+                    <option value="Ambitioner og mål">Ambitioner og mål</option>
+                    <option value="Sjov og humor">Sjov og humor</option>
+                    <option value="Ærlighed">Ærlighed</option>
+                    <option value="Eventyr og oplevelser">Eventyr og oplevelser</option>
+                    <option value="Empati og medfølelse">Empati og medfølelse</option>
+                    <option value="Tolerance og ansvarlighed">Tolerance og ansvarlighed</option>
+                    <option value="Mod">Mod</option>
+                    <option value="Passion">Passion</option>
                 </select>
             </div>
 
@@ -227,16 +257,16 @@ if (!empty($_POST["data"])){
                 </label>
 
                 <select class="form-select input-text border-0 shadow-sm" multiple name="data[preferedValues][]" id="preferedValues">
-                    <option value="1">Kommunikation</option>
-                    <option value="2">Familie og forpligtigelse</option>
-                    <option value="3">Ambitioner og mål</option>
-                    <option value="4">Sjov og humor</option>
-                    <option value="5">Ærlighed</option>
-                    <option value="6">Eventyr og oplevelser</option>
-                    <option value="7">Empati og medfølelse</option>
-                    <option value="8">Tolerance og ansvarlighed</option>
-                    <option value="9">Mod</option>
-                    <option value="10">Passion</option>
+                    <option value="Kommunikation">Kommunikation</option>
+                    <option value="Familie og forpligtigelse">Familie og forpligtigelse</option>
+                    <option value="Ambitioner og mål">Ambitioner og mål</option>
+                    <option value="Sjov og humor">Sjov og humor</option>
+                    <option value="Ærlighed">Ærlighed</option>
+                    <option value="Eventyr og oplevelser">Eventyr og oplevelser</option>
+                    <option value="Empati og medfølelse">Empati og medfølelse</option>
+                    <option value="Tolerance og ansvarlighed">Tolerance og ansvarlighed</option>
+                    <option value="Mod">Mod</option>
+                    <option value="Passion">Passion</option>
                 </select>
             </div>
 
@@ -244,7 +274,7 @@ if (!empty($_POST["data"])){
 
             <div class="my-5">
                 <label class="py-2" for="description">Beskrivelse</label>
-                <input class="form-control input-text border-0 shadow-sm" type="text" name="data[description]" id="description" placeholder="Indsæt en kort beskrivelse om dig sekv" value="">
+                <input class="form-control input-text border-0 shadow-sm" type="text" name="data[description]" id="description" placeholder="Indsæt en kort beskrivelse om dig selv" value="">
             </div>
 
             <div class="my-5">
@@ -256,7 +286,7 @@ if (!empty($_POST["data"])){
 
 
                 <button class="btn btn-light shadow-sm" type="button" onclick="showPreviousTab()">Tilbage</button>
-                <button class="btn btn-light shadow-sm" type="button" onclick="showNextTab()">Videre</button>
+                <button class="btn btn-light-blue shadow-sm" type="button" onclick="showNextTab()">Videre</button>
             </div>
 
         </div>
@@ -280,8 +310,8 @@ if (!empty($_POST["data"])){
 
                 <select class="form-select input-text border-0 shadow-sm" name="data[question1]" id="question1">
                     <option>Angiv dit svar</option>
-                    <option>Ja</option>
-                    <option>Nej</option>
+                    <option value="Ja">Ja</option>
+                    <option value="Nej">Nej</option>
                 </select>
             </div>
 
@@ -292,8 +322,8 @@ if (!empty($_POST["data"])){
 
                 <select class="form-select input-text border-0 shadow-sm" name="data[question2]" id="question2">
                     <option>Angiv dit svar</option>
-                    <option>Ja</option>
-                    <option>Nej</option>
+                    <option value="Ja">Ja</option>
+                    <option value="Nej">Nej</option>
                 </select>
             </div>
 
@@ -302,8 +332,8 @@ if (!empty($_POST["data"])){
 
                 <select class="form-select input-text border-0 shadow-sm" name="data[question3]" id="question3">
                     <option>Angiv dit svar</option>
-                    <option>Ja</option>
-                    <option>Nej</option>
+                    <option value="Ja">Ja</option>
+                    <option value="Nej">Nej</option>
                 </select>
             </div>
 
@@ -313,8 +343,8 @@ if (!empty($_POST["data"])){
 
                 <select class="form-select input-text border-0 shadow-sm" name="data[question4]" id="question4">
                     <option>Angiv dit svar</option>
-                    <option>Ja</option>
-                    <option>Nej</option>
+                    <option value="Ja">Ja</option>
+                    <option value="Nej">Nej</option>
                 </select>
             </div>
 
@@ -324,15 +354,15 @@ if (!empty($_POST["data"])){
 
                 <select class="form-select input-text border-0 shadow-sm" name="data[question5]" id="question5">
                     <option>Angiv dit svar</option>
-                    <option>Ja</option>
-                    <option>Nej</option>
+                    <option value="Ja">Ja</option>
+                    <option value="Nej">Nej</option>
                 </select>
             </div>
 
             <div class="d-flex justify-content-between my-3" role="tablist">
 
                 <button class="btn btn-light shadow-sm" type="button" onclick="showPreviousTab()">Tilbage</button>
-                <button class="btn btn-light shadow-sm" type="submit">Næste</button>
+                <button class="btn btn-light-blue shadow-sm" type="submit">Næste</button>
 
             </div>
 

@@ -29,12 +29,16 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "bootstrapComponents";
 
 // 5. Du kan lave styling her...
+html, body {
+	overscroll-behavior: none;
+}
 body {
 	font-family: "Verdana", "SansSerif";
 }
 
 html[data-font="comic-sans"] body{
-	font-family: "Comic Sans MS", SansSerif;
+	font-family: 'Comic Neue', cursive;
+	font-family: 'Mooli', sans-serif;;
 }
 
 html[data-theme="GreenRedBlind"] {
@@ -58,6 +62,18 @@ html[data-theme="GreenRedBlind"] {
 		--bs-btn-disabled-bg: var(--bs-dark-green-redgreenblind);
 		--bs-btn-disabled-border-color: var(--bs-dark-green-redgreenblind);
 	}
+
+	& .btn-light-blue {
+		--bs-btn-bg: var(--bs-light-blue-redgreenblind);
+		--bs-btn-border-color: var(--bs-light-blue-redgreenblind);
+		--bs-btn-hover-bg: var(--bs-light-blue-redgreenblind);
+		--bs-btn-hover-border-color: var(--bs-light-blue-redgreenblind);
+		--bs-btn-active-bg: var(--bs-light-blue-redgreenblind);
+		--bs-btn-active-border-color: var(--bs-light-blue-redgreenblind);
+		--bs-btn-disabled-color: #000;
+		--bs-btn-disabled-bg: var(--bs-light-blue-redgreenblind);
+		--bs-btn-disabled-border-color: var(--bs-light-blue-redgreenblind);
+	}
 }
 html[data-theme="BlueYellowBlind"] {
 	--bs-light-blue: var(--bs-light-blue-blueyellowblind);
@@ -79,6 +95,18 @@ html[data-theme="BlueYellowBlind"] {
 		--bs-btn-disabled-color: #000;
 		--bs-btn-disabled-bg: var(--bs-dark-green-blueyellowblind);
 		--bs-btn-disabled-border-color: var(--bs-dark-green-blueyellowblind);
+	}
+	
+	& .btn-light-blue {
+		--bs-btn-bg: var(--bs-light-blue-blueyellowblind);
+		--bs-btn-border-color: var(--bs-light-blue-blueyellowblind);
+		--bs-btn-hover-bg: var(--bs-light-blue-blueyellowblind);
+		--bs-btn-hover-border-color: var(--bs-light-blue-blueyellowblind);
+		--bs-btn-active-bg: var(--bs-light-blue-blueyellowblind);
+		--bs-btn-active-border-color: var(--bs-light-blue-blueyellowblind);
+		--bs-btn-disabled-color: #000;
+		--bs-btn-disabled-bg: var(--bs-light-blue-blueyellowblind);
+		--bs-btn-disabled-border-color: var(--bs-light-blue-blueyellowblind);
 	}
 }
 
@@ -113,7 +141,7 @@ html[data-theme="BlueYellowBlind"] {
 	top: 0;
 	left: 0;
 	opacity: .25;
-	background-image: url("../images/forsidebaggrund2.png");
+	background-image: url("../images/forsidebaggrund1.webp");
 	background-size: 225px;
 	background-size: 100vw;
 	background-repeat: repeat;
@@ -145,6 +173,9 @@ html[data-theme="BlueYellowBlind"] {
 	object-fit: contain;
 	overflow: hidden;
 	border: 8px solid var(--bs-light-blue);
+	& img {
+		width: 100%;
+	}
 }
 
 .image-blur {
@@ -152,8 +183,8 @@ html[data-theme="BlueYellowBlind"] {
 }
 
 .new-match-pic{
-	height: 140px;
-	width: 140px;
+	max-height: 130px;
+	max-width: 130px;
 	border-radius: 50%;
 	object-fit: contain;
 	overflow: hidden;
@@ -259,7 +290,9 @@ main {
 .quiz-navigation-btn {
 	border-width: 0;
 }
-
+.quiz-answer p {
+	display: inline;
+}
 .question-icon{
 	font-size: 70px;
 }

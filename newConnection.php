@@ -22,6 +22,11 @@ $connectedUser = $db->sql($sql)[0];
 
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=Mooli&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/ddc56212a6.js" crossorigin="anonymous"></script>
     <script src="js/themeToggle.js"></script>
     <script src="js/fontToggle.js"></script>
@@ -45,7 +50,7 @@ $connectedUser = $db->sql($sql)[0];
             <div class="col">
 
                 <div class="new-match-pic text-center mx-auto">
-                    <img class="img-fluid" src="uploads/<?php echo $connectedUser->profileImage; ?>">
+                    <img class="img-fluid" src="uploads/<?php echo $connectedUser->profileImage; ?>" alt="Profilbillede">
                 </div>
             </div>
 
@@ -56,7 +61,7 @@ $connectedUser = $db->sql($sql)[0];
             <div class="col">
 
                 <div class="new-match-pic text-center mx-auto">
-                    <img class="img-fluid" src="uploads/<?php echo $currentUser->profileImage; ?>">
+                    <img class="img-fluid" src="uploads/<?php echo $currentUser->profileImage; ?>" alt="Profilbillede">
                 </div>
 
             </div>
